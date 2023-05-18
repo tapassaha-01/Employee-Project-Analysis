@@ -2,6 +2,7 @@ package com.interrait.EmployeeProjectanalysis.model;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ public class EmpMonWise {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long projId;
-	@ManyToMany(mappedBy = "projetName") 
+	@ManyToMany(mappedBy = "projetName",cascade = CascadeType.ALL) 
 	private List<EmpProjWise> assignedEmp;
 	@Column
 	private String month;

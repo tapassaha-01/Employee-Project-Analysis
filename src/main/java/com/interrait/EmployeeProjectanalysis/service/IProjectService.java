@@ -25,41 +25,18 @@ public class IProjectService implements ProjectService{
 		
 		//first create a EmpProjWise obj from emp 
 		// then set all the obj to the emp and save both to the sql database with their respective jparepositoryies
-		List<EmpMonWise> result = new ArrayList<EmpMonWise>();
-//		for(EmpMonWise j:emp) 
-//		{
-//		List<EmpProjWise> empProjWise = j.getAssignedEmp();
-//		for(EmpProjWise i: empProjWise) 
-//		{
-//			i.setProjetName(emp);
-//			monthRepo.save(i);
-//			System.out.println(i);
-//			
-//		}
-////		monthRepo.saveAll(empProjWise);
-////		j.setAssignedEmp(empProjWise);
-//		result.add(projRepo.save(j));
-//		}
-//		return result;
+
 		for (EmpMonWise j : emp) {
 	        List<EmpProjWise> empProjWiseList = j.getAssignedEmp();
-	        System.out.println(empProjWiseList);
-	       
+	        projRepo.save(j);
 	        for (EmpProjWise i : empProjWiseList) {
+//	        	System.out.println(i.getClass());
 	            i.setProjetName(emp);
-//	            System.out.println(i);
-//	            monthRepo.save(i);
+	            monthRepo.save(i);
 	        }
-	        monthRepo.saveAll(empProjWiseList);
-	        result.add(projRepo.save(j));
-//	        j.setAssignedEmp(empProjWiseList);
-	         // Save EmpMonWise entity first
-//	        monthRepo.saveAll(empProjWiseList);
-	        
-	       
 	    }
-		System.out.println(result);
-	    return result;
+
+	    return null;
 	}
 	
 }

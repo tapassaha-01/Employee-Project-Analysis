@@ -21,7 +21,7 @@ public class EmpProjWise{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long empWorkId;
 	@Column
-	private String EmpName;
+	private String empName;
 	@ManyToMany
 	@JoinTable(
 	        name = "Emp_Proj_relation_table",
@@ -55,10 +55,10 @@ public class EmpProjWise{
 	private int decData;
 	
 	public String getEmpName() {
-		return EmpName;
+		return empName;
 	}
 	public void setEmpName(String empName) {
-		EmpName = empName;
+		this.empName = empName;
 	}
 	public List<EmpMonWise> getProjetName() {
 		return projetName;
@@ -140,7 +140,7 @@ public class EmpProjWise{
 	}
 	@Override
 	public String toString() {
-		return "EmpMonWise [EmpName=" + EmpName + ", projetName=" + projetName + ", janData=" + janData + ", febData="
+		return "EmpMonWise [EmpName=" + empName + ", projetName=" + projetName + ", janData=" + janData + ", febData="
 				+ febData + ", marchData=" + marchData + ", aprilData=" + aprilData + ", mayData=" + mayData
 				+ ", junData=" + junData + ", julyData=" + julyData + ", augData=" + augData + ", sepData=" + sepData
 				+ ", octData=" + octData + ", novData=" + novData + ", decData=" + decData + "]";
@@ -151,7 +151,7 @@ public class EmpProjWise{
 	public EmpProjWise(String empName, List<EmpMonWise> projetName, int janData, int febData, int marchData, int aprilData,
 			int mayData, int junData, int julyData, int augData, int sepData, int octData, int novData, int decData) {
 		super();
-		EmpName = empName;
+		this.empName = empName;
 		this.projetName = projetName;
 		this.janData = janData;
 		this.febData = febData;
