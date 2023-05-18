@@ -1,5 +1,7 @@
 package com.interrait.EmployeeProjectanalysis.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +20,7 @@ public class controller {
 	private ProjectService projService;
 	
 	@PostMapping("/addProject")
-	public EmpMonWise insertData(@RequestBody EmpMonWise emp) {
+	public List<EmpMonWise> insertData(@RequestBody List<EmpMonWise> emp) {
 		return projService.insertData(emp);
 	}
 }
