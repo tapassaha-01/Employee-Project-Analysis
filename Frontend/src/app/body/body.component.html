@@ -1,0 +1,28 @@
+<div class="button">
+<button (click)="OnplannedClick()">Planned Hours</button>
+<button (click)="OnactualClick()"> Actual Hours</button>
+</div>
+<div class="tables">
+<table class="Planned" *ngIf="isPlanned">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </table>
+  
+  <table class="Planned" *ngIf="isActual">
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </table>
+
+</div>

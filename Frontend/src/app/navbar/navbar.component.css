@@ -1,0 +1,19 @@
+.navbar h2{
+  font-style: normal;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.input form{
+    display: flex;
+    flex-direction: row;
+}
+.input form div label{
+    margin: 10px;
+    font-style: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input form div {
+    margin :10px;
+}

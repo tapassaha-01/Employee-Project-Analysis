@@ -1,0 +1,26 @@
+<div class="navbar" *ngIf="welcome">
+    <h2>Welcome : {{massage}}</h2>
+</div>
+<div class="input" *ngIf="!welcome">
+    <form [formGroup]="uploadForm" >
+        <div>
+            <label >Project Data </label><br><br>
+            <label>Month Wise Project Data </label><br><br>
+            <label >Employee Name</label>
+            
+        </div>
+        <div>
+            <input type="file" formControlName="projectFile"><br><br>
+        <input type="file" formControlName="monthFile"><br><br>
+        <input type="text" formControlName="employeeName">
+        </div>
+        <div>
+            <input type="text" formControlName="projectName"><br><br>
+            <input type="text" formControlName="monthName">
+        </div>
+    </form>
+    <br>
+    <div style="display: flex; align-items: center;justify-content: center; padding:10px">
+        <button type="submit" (click)="OnSubmit()">Submit</button>
+    </div>
+</div>

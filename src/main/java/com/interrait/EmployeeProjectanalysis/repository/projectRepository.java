@@ -9,7 +9,4 @@ import com.interrait.EmployeeProjectanalysis.model.EmpProjWise;
 
 public interface projectRepository extends JpaRepository<EmpMonWise, Long> {
 
-
-
-
 }

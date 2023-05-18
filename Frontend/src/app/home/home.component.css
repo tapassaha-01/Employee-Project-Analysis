@@ -1,0 +1,30 @@
+.header{
+    background-color: rgb(63, 61, 61);
+    display: flex;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.navbar{
+    background-color: rgb(67, 230, 175);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.body{
+    background-color: rgb(218, 230, 226);
+    height: 485px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    background-color: rgb(65, 65, 65);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

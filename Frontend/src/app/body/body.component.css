@@ -1,0 +1,19 @@
+.button button{
+    padding: 5px;
+    margin: 5px;
+
+}
+.Planned {
+    width: 50%;
+    border-collapse: collapse;
+  }
+  
+  .Planned th, .Planned td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  .tables{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
